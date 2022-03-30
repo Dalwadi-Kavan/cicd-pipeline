@@ -3,13 +3,13 @@ name: Upload Website
 on:
   push:
     branches:
-    - main
+    - master
 
 jobs:
   deploy:
     runs-on: self-hosted
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@master
     #- uses: jakejarvis/s3-sync-action@master
     - name: copy to s3
       run: |
