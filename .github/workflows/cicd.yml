@@ -13,4 +13,6 @@ jobs:
     #- uses: jakejarvis/s3-sync-action@master
     - name: copy to s3
       run: |
-       echo "running"
+       sudo apt update
+       sudo apt install python3-pip
+       pip3 --version
