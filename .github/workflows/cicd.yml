@@ -7,12 +7,10 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted
+    runs-on: own-hosted
     steps:
     - uses: actions/checkout@master
     #- uses: jakejarvis/s3-sync-action@master
     - name: copy to s3
       run: |
-       sudo apt update
-       sudo apt install python3-pip -y
-       pip3 --version
+       pwd
