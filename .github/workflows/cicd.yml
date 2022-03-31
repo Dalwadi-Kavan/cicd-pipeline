@@ -13,4 +13,4 @@ jobs:
     #- uses: jakejarvis/s3-sync-action@master
     - name: copy to s3
       run: |
-       pwd
+       rsync -hzvr /home/ec2-user/actions-runner/_work/cicd-pipeline/cicd-pipeline/* ubuntu@3.110.191.67:/home/ubuntu/server/
