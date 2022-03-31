@@ -13,6 +13,7 @@ jobs:
     #- uses: jakejarvis/s3-sync-action@master
     - name: copy to s3
       run: |
+       echo "$RUNNER_NAME $RUNNER_OS"
        rsync -hzvr . ubuntu@3.110.191.67:/home/ubuntu/server/
        cat index.html > job_output.txt
     - name: upload artifacts
