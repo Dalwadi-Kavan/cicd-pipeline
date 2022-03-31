@@ -14,3 +14,8 @@ jobs:
     - name: copy to s3
       run: |
        rsync -hzvr . ubuntu@3.110.191.67:/home/ubuntu/server/
+    - name: upload artifacts
+      uses: actions/upload-artifact@v3
+      with: 
+       name: html artifacts
+       path: ./job_output.txt
